@@ -1,0 +1,30 @@
+{
+  "name": "@adobe/uix-cf-editor-contract",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "UIX Commons Contracts for Content Fragment Editor",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal --watch",
+    "build": "tsc",
+    "docs": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal",
+    "yalc": "yalc publish --push"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@adobe/uix-commons-contract": "workspace:*"
+  },
+  "devDependencies": {
+    "@adobe/uix-config": "workspace:*",
+    "typedoc": "^0.28.5",
+    "typescript": "latest"
+  }
+}
