@@ -1,0 +1,32 @@
+{
+  "name": "@adobe/uix-commons-contract",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "UIX Commons Contracts",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal --watch",
+    "build": "tsc",
+    "docs": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal",
+    "yalc": "yalc publish --push"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@adobe/uix-config": "workspace:*",
+    "tsx": "^4.20.3",
+    "typedoc": "^0.28.5",
+    "typescript": "latest"
+  },
+  "dependencies": {
+    "@types/json-logic-js": "^2.0.8",
+    "csstype": "3.0.10",
+    "json-logic-js": "^2.0.5",
+    "ts-node": "^10.9.2",
+    "zod": "^4.0.17"
+  }
+}

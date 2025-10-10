@@ -1,0 +1,33 @@
+{
+  "name": "@adobe/uix-contracts",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "docs": "turbo run docs",
+    "yalc": "turbo run yalc",
+    "prepare": "husky",
+    "regression": "tsx scripts/regress.ts",
+    "test": "npx jest scripts"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^22.15.3",
+    "expect-type": "^1.2.1",
+    "husky": "^9.1.7",
+    "jest": "^30.0.2",
+    "prettier": "^3.5.3",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "turbo": "^2.5.4",
+    "typescript": "^5.4.4"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}
