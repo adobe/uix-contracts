@@ -39,3 +39,7 @@ yarn-error.log*
 # Misc
 .DS_Store
 *.pem
+
+# Changesets
+.changeset/*.md
+!.changeset/README.md

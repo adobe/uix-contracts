@@ -1,0 +1,58 @@
+name: Changeset Check
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - 'packages/cf-admin-contract/**'
+      - 'packages/cf-editor-contract/**'
+      - 'packages/universal-editor/**'
+
+jobs:
+  check:
+    name: Check for changeset
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.0.0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check for changesets
+        run: |
+          if [ ! -d ".changeset" ]; then
+            echo "❌ No .changeset directory found"
+            exit 1
+          fi
+          
+          # Count markdown files (excluding README.md)
+          changeset_count=$(find .changeset -name "*.md" ! -name "README.md" -type f | wc -l)
+          
+          if [ $changeset_count -eq 0 ]; then
+            echo "❌ No changeset found!"
+            echo ""
+            echo "It looks like you've made changes to publishable packages without adding a changeset."
+            echo ""
+            echo "Please run 'pnpm changeset' to create one, or add an empty changeset with 'pnpm changeset --empty' if this is intentional."
+            echo ""
+            echo "Learn more: https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md"
+            exit 1
+          fi
+          
+          echo "✅ Found $changeset_count changeset(s)"
+

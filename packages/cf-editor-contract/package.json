@@ -7,6 +7,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal --watch",
     "build": "tsc",
