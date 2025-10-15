@@ -28,7 +28,6 @@
   },
   "devDependencies": {
     "@repo/uix-config": "workspace:*",
-    "@aem-sites/headless-canvas-contract": "^3.0.2",
     "typedoc": "^0.28.5",
     "typescript": "latest"
   }
