@@ -10,7 +10,8 @@
   "ignore": [
     "docs",
     "@repo/ui",
-    "@repo/eslint-config"
+    "@repo/eslint-config",
+    "@repo/uix-config"
   ]
 }
 

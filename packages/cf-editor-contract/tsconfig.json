@@ -1,5 +1,5 @@
 {
-  "extends": "@adobe/uix-config/base.json",
+  "extends": "@repo/uix-config/base.json",
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "src",

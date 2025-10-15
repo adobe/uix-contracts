@@ -1342,3 +1342,5 @@ export type FieldPrivateMethodsEditor<ModelT> = {
   getValue: () => Promise<string>;
   getError: () => Promise<ValidationResult>;
 };
+
+export * from "./contentFragment.js";

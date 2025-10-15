@@ -63,12 +63,12 @@ importers:
       '@adobe/uix-commons-contract':
         specifier: workspace:*
         version: link:../../packages/commons-contract
-      '@adobe/uix-config':
-        specifier: workspace:*
-        version: link:../../packages/typescript-config
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
+      '@repo/uix-config':
+        specifier: workspace:*
+        version: link:../../packages/typescript-config
       '@types/node':
         specifier: ^22.15.3
         version: 22.15.29
@@ -103,7 +103,7 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0
     devDependencies:
-      '@adobe/uix-config':
+      '@repo/uix-config':
         specifier: workspace:*
         version: link:../typescript-config
       typedoc:
@@ -119,7 +119,7 @@ importers:
         specifier: workspace:*
         version: link:../commons-contract
     devDependencies:
-      '@adobe/uix-config':
+      '@repo/uix-config':
         specifier: workspace:*
         version: link:../typescript-config
       typedoc:
@@ -147,7 +147,7 @@ importers:
         specifier: ^4.0.17
         version: 4.0.17
     devDependencies:
-      '@adobe/uix-config':
+      '@repo/uix-config':
         specifier: workspace:*
         version: link:../typescript-config
       tsx:
@@ -207,12 +207,12 @@ importers:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
     devDependencies:
-      '@adobe/uix-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../eslint-config
+      '@repo/uix-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       '@turbo/gen':
         specifier: ^2.5.0
         version: 2.5.4(@types/node@22.15.29)(typescript@5.8.2)
@@ -241,12 +241,12 @@ importers:
         specifier: ^0.0.33
         version: 0.0.33
     devDependencies:
-      '@adobe/uix-config':
-        specifier: workspace:*
-        version: link:../typescript-config
       '@aem-sites/headless-canvas-contract':
         specifier: ^3.0.2
         version: 3.0.2(@adobe/exc-app@1.4.17(@apollo/client@3.14.0(@types/react@19.1.0)(graphql@16.11.0)(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(graphql-tag@2.12.6(graphql@16.11.0)))(@aem-sites/commons-service@6.0.1)(@react-spectrum/provider@3.10.8(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@types/react@19.1.0)(date-fns@4.1.0)(eslint-config-prettier@10.1.5(eslint@9.28.0))(eslint-import-resolver-typescript@4.4.4(eslint-plugin-import@2.32.0)(eslint@9.28.0))(eslint-plugin-header@3.1.1(eslint@9.28.0))(eslint-plugin-import@2.32.0(eslint-import-resolver-typescript@4.4.4)(eslint@9.28.0))(eslint-plugin-prettier@5.5.1(eslint-config-prettier@10.1.5(eslint@9.28.0))(eslint@9.28.0)(prettier@3.5.3))(eslint-plugin-react@7.37.5(eslint@9.28.0))(eslint-plugin-simple-import-sort@12.1.1(eslint@9.28.0))(eslint-plugin-sonarjs@3.0.4(eslint@9.28.0))(eslint-plugin-sort-keys-fix@1.1.2)(eslint-plugin-vitest@0.5.4(eslint@9.28.0)(typescript@5.9.2))(history@5.3.0)(lodash@4.17.21)(prop-types@15.8.1)(react-dom@19.1.0(react@19.1.0))(react-intl@7.1.11(react@19.1.0)(typescript@5.9.2))(react@19.1.0)
+      '@repo/uix-config':
+        specifier: workspace:*
+        version: link:../typescript-config
       typedoc:
         specifier: ^0.28.5
         version: 0.28.5(typescript@5.9.2)
