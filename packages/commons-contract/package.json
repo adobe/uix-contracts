@@ -4,6 +4,12 @@
   "version": "1.0.0",
   "description": "UIX Commons Contracts",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal --watch",
     "build": "tsc",

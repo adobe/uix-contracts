@@ -8,11 +8,9 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@adobe/uix-commons-contract",
-    "@adobe/uix-config",
-    "@adobe/eslint-config",
-    "@adobe/typescript-config",
-    "@adobe/ui"
+    "docs",
+    "@repo/ui",
+    "@repo/eslint-config"
   ]
 }
 

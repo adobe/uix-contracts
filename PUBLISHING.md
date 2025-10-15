@@ -5,9 +5,12 @@ This repository uses [Changesets](https://github.com/changesets/changesets) for 
 ## Published Packages
 
 The following packages are published to NPM:
+- `@adobe/uix-commons-contract` (shared dependency)
 - `@adobe/uix-cf-admin-contract`
 - `@adobe/uix-cf-editor-contract`
 - `@adobe/uix-universal-editor-contract`
+
+Note: `@adobe/uix-commons-contract` is also published because the other three packages depend on it.
 
 ## Workflow
 
@@ -97,7 +100,7 @@ The workflow uses the `ADOBE_BOT_NPM_TOKEN` repository secret for authentication
 ### Prevention: CI Check
 
 A GitHub Actions workflow (`changeset-check.yml`) runs on pull requests that modify publishable packages. It will **fail the CI check** if:
-- You modify a package in `packages/cf-admin-contract/`, `packages/cf-editor-contract/`, or `packages/universal-editor/`
+- You modify a package in `packages/commons-contract/`, `packages/cf-admin-contract/`, `packages/cf-editor-contract/`, or `packages/universal-editor/`
 - AND there's no changeset in the `.changeset` directory
 
 This prevents merging PRs without changesets.

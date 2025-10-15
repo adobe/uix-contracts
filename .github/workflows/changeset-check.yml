@@ -5,6 +5,7 @@ on:
     branches:
       - main
     paths:
+      - 'packages/commons-contract/**'
       - 'packages/cf-admin-contract/**'
       - 'packages/cf-editor-contract/**'
       - 'packages/universal-editor/**'
