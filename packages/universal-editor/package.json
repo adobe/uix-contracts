@@ -1,12 +1,15 @@
 {
   "name": "@adobe/uix-universal-editor-contract",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "UIX contracts for the Universal Editor",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal --watch",
     "build": "tsc",
@@ -24,8 +27,7 @@
     "@types/json-patch": "^0.0.33"
   },
   "devDependencies": {
-    "@adobe/uix-config": "workspace:*",
-    "@aem-sites/headless-canvas-contract": "^3.0.2",
+    "@repo/uix-config": "workspace:*",
     "typedoc": "^0.28.5",
     "typescript": "latest"
   }

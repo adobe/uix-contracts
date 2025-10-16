@@ -18,7 +18,6 @@ import {
   RailApi,
   FieldModel,
   FieldPrivateMethodsEditor,
-  AEMBaseSharedContext,
 } from "@adobe/uix-commons-contract";
 import type { OpPatch } from "json-patch";
 

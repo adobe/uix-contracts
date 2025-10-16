@@ -1,12 +1,15 @@
 {
   "name": "@adobe/uix-cf-admin-contract",
   "type": "module",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "UIX Commons Contracts for Content Fragment Admin",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "dev": "typedoc src --json docs/index.json --excludePrivate --excludeProtected --excludeInternal --watch",
     "build": "tsc",
@@ -24,7 +27,7 @@
     "react": "^19.1.0"
   },
   "devDependencies": {
-    "@adobe/uix-config": "workspace:*",
+    "@repo/uix-config": "workspace:*",
     "typedoc": "^0.28.5",
     "typescript": "latest"
   }

@@ -11,9 +11,13 @@
     "yalc": "turbo run yalc",
     "prepare": "husky",
     "regression": "tsx scripts/regress.ts",
-    "test": "npx jest scripts"
+    "test": "npx jest scripts",
+    "changeset": "changeset",
+    "version": "changeset version && pnpm install --no-frozen-lockfile",
+    "release": "pnpm run build && changeset publish"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.27.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^22.15.3",
     "expect-type": "^1.2.1",
