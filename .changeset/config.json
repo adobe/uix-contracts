@@ -7,11 +7,6 @@
   "access": "public",
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
-  "ignore": [
-    "docs",
-    "@repo/ui",
-    "@repo/eslint-config",
-    "@repo/uix-config"
-  ]
+  "ignore": []
 }
 

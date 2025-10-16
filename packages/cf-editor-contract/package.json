@@ -1,7 +1,7 @@
 {
   "name": "@adobe/uix-cf-editor-contract",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "UIX Commons Contracts for Content Fragment Editor",
   "types": "dist/index.d.ts",
   "files": [
