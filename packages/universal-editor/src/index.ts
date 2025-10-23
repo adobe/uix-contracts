@@ -116,7 +116,7 @@ export type UniversalEditorFieldApi = {
   field: FieldPrivateMethodsUniversalEditor;
 };
 
-export type UnivewrsalEditorSharedContent = {
+export type UniversalEditorSharedContent = {
   authScheme: string;
   theme: string;
   token: string;
@@ -131,7 +131,7 @@ export type UniversalEditor = {
     HeaderItemsApi &
     EventsExtensionApi;
   incoming: ModalApi & RemoteAppApi & EditorStateApi & EditorActionsApi;
-  sharedContext: UnivewrsalEditorSharedContent;
+  sharedContext: UniversalEditorSharedContent;
 };
 
 export type UniversalEditorFieldUIApi = UniversalEditor["incoming"] &
