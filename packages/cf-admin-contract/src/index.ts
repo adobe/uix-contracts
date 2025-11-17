@@ -86,7 +86,11 @@ export type ExtensionRequirements = {
  * All available types for CF Editor.
  */
 export type CFAdmin = {
-  outgoing: ActionBarItemsApi & HeaderItemsApi & HeaderDeleteItemsApi & FragmentSelectionsApi & ContentFragmentGridApi;
+  outgoing: ActionBarItemsApi &
+    HeaderItemsApi &
+    HeaderDeleteItemsApi &
+    FragmentSelectionsApi &
+    ContentFragmentGridApi;
   incoming: ProgressCircleApi & ModalApi & ToastApi & NavigationApi;
   sharedContext: CFAdminSharedContext;
 };
