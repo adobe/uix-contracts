@@ -1275,6 +1275,7 @@ export type RteApi = {
   rte?: {
     ut?: () => Promise<ToolbarButton[]>;
     getCoreButtons?: () => Promise<CoreButton[]>;
+    getCustomButtons?: () => Promise<ToolbarButton[]>;
     removeButtons?: () => Promise<CoreButton[]>;
     getWidgets?: () => Promise<Widget[]>;
     getBadges?: () => Promise<Badge[]>;
