@@ -5,6 +5,7 @@ This repository uses [Changesets](https://github.com/changesets/changesets) for 
 ## Published Packages
 
 The following packages are published to NPM:
+
 - `@adobe/uix-commons-contract` (shared dependency)
 - `@adobe/uix-cf-admin-contract`
 - `@adobe/uix-cf-editor-contract`
@@ -24,6 +25,7 @@ pnpm changeset
 ```
 
 This will prompt you to:
+
 1. Select which packages have changed
 2. Choose the type of change (major, minor, or patch)
 3. Write a summary of the changes
@@ -33,6 +35,7 @@ The changeset will be saved as a markdown file in the `.changeset` directory.
 ### 2. Versioning
 
 When changes are pushed to the `main` branch, the GitHub Actions workflow will:
+
 - Detect any changesets
 - Create or update a "Version Packages" pull request
 - The PR will update package versions and CHANGELOG files based on all pending changesets
@@ -40,6 +43,7 @@ When changes are pushed to the `main` branch, the GitHub Actions workflow will:
 ### 3. Publishing
 
 When you merge the "Version Packages" pull request:
+
 - The GitHub Actions workflow will automatically publish the updated packages to NPM
 - Changesets will be consumed and removed
 - Git tags will be created for the new versions
@@ -47,6 +51,7 @@ When you merge the "Version Packages" pull request:
 ### 4. Manual Trigger
 
 You can also manually trigger the publish workflow from the GitHub Actions UI:
+
 1. Go to the "Actions" tab in GitHub
 2. Select the "Publish Packages" workflow
 3. Click "Run workflow"
@@ -86,6 +91,7 @@ Add new field validation API
 ## Configuration
 
 The publishing workflow is configured in:
+
 - `.github/workflows/publish.yml` - GitHub Actions workflow
 - `.changeset/config.json` - Changesets configuration
 - `.npmrc` - NPM registry authentication
@@ -100,6 +106,7 @@ The workflow uses the `ADOBE_BOT_NPM_TOKEN` repository secret for authentication
 ### Prevention: CI Check
 
 A GitHub Actions workflow (`changeset-check.yml`) runs on pull requests that modify publishable packages. It will **fail the CI check** if:
+
 - You modify a package in `packages/commons-contract/`, `packages/cf-admin-contract/`, `packages/cf-editor-contract/`, or `packages/universal-editor/`
 - AND there's no changeset in the `.changeset` directory
 
@@ -110,6 +117,7 @@ This prevents merging PRs without changesets.
 If changes are already on `main` without a changeset:
 
 1. **Create a changeset now**:
+
    ```bash
    git checkout main
    git pull
@@ -117,6 +125,7 @@ If changes are already on `main` without a changeset:
    ```
 
 2. **Commit and push**:
+
    ```bash
    git add .changeset
    git commit -m "chore: add missing changeset"
@@ -135,4 +144,3 @@ pnpm changeset --empty
 ```
 
 This documents that the lack of version bump is intentional.
-

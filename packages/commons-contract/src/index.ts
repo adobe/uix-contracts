@@ -1101,7 +1101,7 @@ export type Button = {
   id: string;
   label: string;
   icon?: IconVariant;
-  onClick(): Promise<void>;
+  onClick(...args: any[]): Promise<void>;
 };
 
 // ------ Header delete items API
@@ -1275,6 +1275,7 @@ export type RteApi = {
   rte?: {
     ut?: () => Promise<ToolbarButton[]>;
     getCoreButtons?: () => Promise<CoreButton[]>;
+    getCustomButtons?: () => Promise<ToolbarButton[]>;
     removeButtons?: () => Promise<CoreButton[]>;
     getWidgets?: () => Promise<Widget[]>;
     getBadges?: () => Promise<Badge[]>;
