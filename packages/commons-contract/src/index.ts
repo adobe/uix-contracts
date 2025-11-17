@@ -1101,7 +1101,7 @@ export type Button = {
   id: string;
   label: string;
   icon?: IconVariant;
-  onClick(): Promise<void>;
+  onClick(...args: any[]): Promise<void>;
 };
 
 // ------ Header delete items API
