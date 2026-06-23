@@ -71,6 +71,35 @@ export type NavigationApi = {
   };
 };
 
+export type DomainTier = {
+  tier: AemTier;
+  domainURLs: string[];
+};
+
+export enum AemTier {
+  Author = "author",
+  Publish = "publish",
+  Preview = "preview"
+}
+
+export enum RequestState {
+  DONE = "DONE",
+  FAILED = "FAILED",
+}
+
+export type DomainTiers = Record<AemTier, DomainTier>;
+
+export type GetDomainTiers = {
+  domainTiers: DomainTiers;
+  status: RequestState;
+}
+
+export type DomainsApi = {
+  domains: {
+    getDomains: () => Promise<GetDomainTiers>;
+  }
+}
+
 export type FieldPrivateMethodsCFEditor<ModelT> = FieldPrivateMethodsEditor<
   ProcessedCanvasFieldModel<ModelT>
 >;
@@ -106,7 +135,7 @@ export type CFEditor = {
     RteWidgetApi &
     ToastApi &
     NavigationApi &
-    ContentFragmentApi;
+    ContentFragmentApi & DomainsApi;
   sharedContext: CFEditorSharedContext;
 };
 
