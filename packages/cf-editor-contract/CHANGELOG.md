@@ -1,5 +1,11 @@
 # @adobe/uix-cf-editor-contract
 
+## 0.1.0
+
+### Minor Changes
+
+- 05afd96: Extended the CFE extension points with the domain tiers capability
+
 ## 0.0.1
 
 ### Patch Changes
